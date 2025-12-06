@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -80,6 +80,24 @@ export default function PpdbSection() {
     uniform: false,
     steps: false,
   });
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Function untuk check window size
+    const checkWindowSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Initial check
+    checkWindowSize();
+
+    // Add event listener untuk resize
+    window.addEventListener("resize", checkWindowSize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkWindowSize);
+  }, []);
 
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
@@ -339,7 +357,7 @@ export default function PpdbSection() {
               </button>
             </div>
 
-            {(expandedSections.steps || window.innerWidth >= 768) && (
+            {(expandedSections.steps || isDesktop) && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
