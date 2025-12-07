@@ -320,7 +320,6 @@ const ComplaintList = () => {
                           : "bg-white text-gray-700 border border-gray-300"
                       }`}
                     >
-                      {status.mobileIcon}
                       <span>{status.label}</span>
                     </button>
                   ))}
@@ -466,9 +465,7 @@ const ComplaintList = () => {
                         <span
                           className={`px-3 py-1 rounded-full text-xs font-medium ${statusInfo.color} ${statusInfo.border}`}
                         >
-                          <span className="hidden sm:inline">
-                            {statusInfo.icon}{" "}
-                          </span>
+                          <span className="hidden sm:inline"></span>
                           {statusInfo.label}
                         </span>
                         <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
@@ -626,7 +623,6 @@ const ComplaintList = () => {
                         getStatusInfo(complaint.status).color
                       }`}
                     >
-                      {getStatusInfo(complaint.status).icon}{" "}
                       {getStatusInfo(complaint.status).label}
                     </span>
                   </div>
