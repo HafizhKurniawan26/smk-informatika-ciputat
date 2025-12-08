@@ -689,7 +689,7 @@ const ComplaintList = () => {
               {complaint.admin_notes && (
                 <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-xl">
                   <h4 className="font-semibold text-green-800 mb-2">
-                    📝 Tanggapan Admin
+                    Tanggapan Admin
                   </h4>
                   <p className="text-sm text-green-700 whitespace-pre-wrap">
                     {complaint.admin_notes}

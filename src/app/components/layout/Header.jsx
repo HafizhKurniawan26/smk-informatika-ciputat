@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import LogoImage from "../../../../public/logo.png";
@@ -13,6 +13,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
+  const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function Header() {
   }, [isHomePage]);
 
   const navigation = [
-    { name: "Beranda", href: "/", id: "home" }, // Changed to root path
+    { name: "Beranda", href: "/", id: "home" },
     { name: "Visi & Misi", href: "/#about", id: "about" },
     { name: "Program", href: "/#programs", id: "programs" },
     {
@@ -70,17 +71,29 @@ export default function Header() {
   ];
 
   const handleNavClick = (href, id, isHashLink = false) => {
-    if (isHashLink && isHomePage) {
-      // Only smooth scroll on homepage for hash links
+    const isHash = href.startsWith("/#");
+
+    // jika bukan di homepage → redirect saja
+    if (isHash && !isHomePage) {
+      window.location.href = href;
+      return;
+    }
+
+    // Tutup mobile menu
+    setIsOpen(false);
+
+    // Jika sedang di homepage → smooth scroll
+    if (isHash && isHomePage) {
       const elementId = href.replace("/#", "");
       const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setActiveSection(elementId);
-      }
+
+      setTimeout(() => {
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          setActiveSection(elementId);
+        }
+      }, 300);
     }
-    // For non-homepage or non-hash links, let the Link component handle navigation
-    setIsOpen(false);
   };
 
   // Determine header styles based on page and scroll state
@@ -260,23 +273,17 @@ export default function Header() {
 
                   if (isHashLink) {
                     return (
-                      <Link
+                      <button
                         key={item.name}
-                        href={isHomePage ? item.href : `/${item.href}`}
-                        onClick={(e) => {
-                          if (isHomePage) {
-                            e.preventDefault();
-                            handleNavClick(item.href, item.id, true);
-                          }
-                        }}
-                        className={`block px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                        onClick={() => handleNavClick(item.href, item.id, true)}
+                        className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors duration-200 ${
                           isActive
                             ? "bg-green-50 text-green-700"
                             : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                         }`}
                       >
                         {item.name}
-                      </Link>
+                      </button>
                     );
                   }
 
