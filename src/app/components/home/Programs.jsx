@@ -33,19 +33,19 @@ export default function Programs() {
       bgColor: "bg-blue-50",
     },
     {
-      number: "500+",
+      number: "243",
       label: "Siswa Aktif",
       icon: Users,
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
-    {
-      number: "95%",
-      label: "Tingkat Kelulusan",
-      icon: Target,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-    },
+    // {
+    //   number: "95%",
+    //   label: "Tingkat Kelulusan",
+    //   icon: Target,
+    //   color: "text-purple-600",
+    //   bgColor: "bg-purple-50",
+    // },
   ];
 
   useEffect(() => {
@@ -270,7 +270,7 @@ export default function Programs() {
           viewport={{ once: true }}
           className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl p-6 md:p-8 shadow-xl"
         >
-          <div className="grid grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}

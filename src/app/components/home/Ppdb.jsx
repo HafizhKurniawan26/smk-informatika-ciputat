@@ -11,6 +11,7 @@ import {
   Phone,
   StepBack,
   StepForwardIcon,
+  Backpack,
 } from "lucide-react";
 
 export default function PpdbSection() {
@@ -186,7 +187,7 @@ export default function PpdbSection() {
             >
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                  <DollarSign className="w-5 h-5 text-green-600" />
+                  <Backpack className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900">Paket Seragam</h3>
@@ -280,7 +281,7 @@ export default function PpdbSection() {
             <div className="bg-white rounded-2xl shadow-lg p-6 h-full">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
-                  <DollarSign className="w-6 h-6 text-green-600" />
+                  <Backpack className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
                   Paket Seragam

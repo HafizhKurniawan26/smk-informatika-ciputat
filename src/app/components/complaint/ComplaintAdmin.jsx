@@ -83,7 +83,7 @@ const ComplaintAdmin = () => {
 
   const adminCredentials = {
     username: "admin",
-    password: "admin123",
+    password: "akademiksmkic",
   };
 
   useEffect(() => {

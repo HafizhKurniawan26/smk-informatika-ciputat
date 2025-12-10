@@ -124,10 +124,7 @@ export default function Contact() {
                 Hubungi kami via WhatsApp untuk informasi lebih lanjut
               </p>
               <motion.a
-                href={`https://wa.me/${schoolData.contact.phone.replace(
-                  /[^0-9]/g,
-                  ""
-                )}?text=Halo, saya ingin informasi tentang SMK Informatika Ciputat`}
+                href={`https://wa.me/6289687412902?text=Halo, saya ingin informasi tentang SMK Informatika Ciputat`}
                 target="_blank"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -190,7 +187,7 @@ export default function Contact() {
               <div className="flex items-center mb-4">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 mr-3" />
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
-                  Lokasi Kampus
+                  Lokasi Sekolah
                 </h3>
               </div>
 

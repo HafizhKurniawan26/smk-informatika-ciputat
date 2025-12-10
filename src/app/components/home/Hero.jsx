@@ -16,7 +16,7 @@ export default function Hero() {
   const stats = [
     {
       icon: Users,
-      number: "500+",
+      number: "243",
       label: "Siswa Aktif",
       color: "text-yellow-300",
     },
@@ -28,13 +28,13 @@ export default function Hero() {
     },
     {
       icon: Award,
-      number: "6+",
+      number: "6",
       label: "Ekstrakurikuler",
       color: "text-purple-300",
     },
     {
       icon: Users,
-      number: "50+",
+      number: "23",
       label: "Guru Berpengalaman",
       color: "text-green-300",
     },

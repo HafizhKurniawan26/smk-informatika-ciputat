@@ -231,7 +231,7 @@ export default function Header() {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <a
-              href="https://wa.me/62123456789"
+              href="https://wa.me/6289687412902"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex justify-center items-center gap-2 px-6 py-2 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 ${styles.ctaButton}`}
@@ -312,7 +312,7 @@ export default function Header() {
                   }`}
                 >
                   <a
-                    href="https://wa.me/62123456789"
+                    href="https://wa.me/6289687412902"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}

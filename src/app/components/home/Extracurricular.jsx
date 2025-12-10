@@ -68,26 +68,26 @@ export default function Extracurricular() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                   {/* Member Badge - Hidden on mobile, visible on tablet+ */}
-                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  {/* <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
                     <div className="bg-white/95 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
                       <Users size={12} className="text-blue-600" />
                       <span className="text-xs sm:text-sm font-medium text-gray-900">
                         50+
                       </span>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Activity Title */}
                   <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2 leading-tight">
                       {activity.name}
                     </h3>
-                    <div className="flex items-center text-white/90">
+                    {/* <div className="flex items-center text-white/90">
                       <Calendar size={12} className="mr-1 sm:mr-2" />
                       <span className="text-xs sm:text-sm">
                         {activity.schedule.split(",")[0]}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ export default function Extracurricular() {
                   </p>
 
                   {/* Details Grid */}
-                  <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                  {/* <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
                     <div className="flex items-start space-x-2 sm:space-x-3">
                       <Clock
                         size={14}
@@ -128,7 +128,7 @@ export default function Extracurricular() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Hidden on mobile, visible on tablet+ */}
                   {/* <div className="hidden sm:block">
@@ -152,13 +152,13 @@ export default function Extracurricular() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true, margin: "-50px" }}
-          className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
+          className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6"
         >
           {[
-            { number: "6+", label: "Kegiatan", color: "text-blue-600" },
-            { number: "300+", label: "Siswa Aktif", color: "text-green-600" },
-            { number: "15+", label: "Pelatih", color: "text-purple-600" },
-            { number: "50+", label: "Prestasi", color: "text-orange-600" },
+            { number: "6", label: "Kegiatan", color: "text-blue-600" },
+            { number: "243", label: "Siswa Aktif", color: "text-green-600" },
+            { number: "5+", label: "Pelatih", color: "text-purple-600" },
+            // { number: "50+", label: "Prestasi", color: "text-orange-600" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

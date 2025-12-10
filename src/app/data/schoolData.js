@@ -213,9 +213,9 @@ export const schoolData = {
   contact: {
     address:
       "Jl. W R Supratman No.50, Pd. Ranji, Kec. Ciputat Tim., Kota Tangerang Selatan, Banten 15412",
-    phone: "02138891018",
-    email: "info@smkinformatika-ciputat.sch.id",
-    website: "https://smkinformatika-ciputat.sch.id",
+    phone: "(021) 388 910 18",
+    email: "informatikaciputat@gmail.com",
+    website: "https://smk-informatika-ciputat.my.id",
     mapUrl: "https://maps.app.goo.gl/TfjgwTaVC5X1ykZa9",
   },
 };
